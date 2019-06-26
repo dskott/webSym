@@ -3,7 +3,7 @@
 
     use Symfony\Component\HttpFoundation\Response;
     use Symfony\Component\HttpFoundation\Request;
-    
+
 
     use Symfony\Component\Routing\Annotation\Route;
     use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -12,10 +12,11 @@
 
     class PageController extends Controller {
         /**
-        * @Route("/")
-        */
+         * @Route("/")
+         */
         public function index(){
-            return $this->render('pages/index.html.twig');
+            $trialVar = 10;
+            return $this->render('pages/index.html.twig', array('var' => $trialVar));
             // return new Response('<html>hello</html>');
         }
     }
